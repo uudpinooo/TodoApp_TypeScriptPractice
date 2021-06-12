@@ -3,7 +3,7 @@ import { VFC } from 'react';
 const App: VFC = () => {
   return (
     <div>
-      <p>TypeScriptだよ　　☺️</p>
+      <p>TypeScriptだよ☺️</p>
     </div>
   );
 };
