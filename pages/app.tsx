@@ -1,7 +1,11 @@
-export default function App() {
+import { VFC } from "react";
+
+const App: VFC = () => {
   return (
     <div>
-      <p>TypeScriptだよー☺️</p>
+      <p>TypeScriptだよ☺️</p>
     </div>
-  )
-}
+  );
+};
+
+export default App;
