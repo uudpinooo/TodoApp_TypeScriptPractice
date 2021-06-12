@@ -8,4 +8,4 @@ jobs:
       - name: Package Install
         run: npm install
       - name: Run eslint-and-prettier
-        run: npm run lint
+        run: eslint --fix ./ --ext ts,tsx
