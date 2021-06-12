@@ -4,7 +4,6 @@ jobs:
   eslint-and-prettier:
     runs-on: macos-latest
   steps:
-    - uses: actions/checkout@v2
     - name: Package Install
       run: npm install
     - name: TypeScript Compile
