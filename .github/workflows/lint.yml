@@ -5,10 +5,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ver14
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
       - name: Package Install
         run: npm install
       - name: Run eslint-and-prettier
