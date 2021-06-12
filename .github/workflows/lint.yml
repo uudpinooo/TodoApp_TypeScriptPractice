@@ -12,6 +12,6 @@ jobs:
       - name: Package Install
         run: npm install
       - name: TypeScript Compile
-        run: npm run lint:ts 
+        run: npm run lint
       - name: Run eslint-and-prettier
         run: npm run lint
