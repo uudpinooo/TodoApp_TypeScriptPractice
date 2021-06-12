@@ -1,13 +1,13 @@
 name: Front-End CI Actions
 on: [push]
 jobs:
-  lint:
+  eslint-and-prettier:
     runs-on: macos-latest
-steps:
-  - uses: actions/checkout@v2
-  - name: Package Install
-    run: npm install
-  - name: TypeScript Compile
-    run: npm run lint:ts 
-  - name: Run eslint-and-prettier
-    run: npm run lint
+  steps:
+    - uses: actions/checkout@v2
+    - name: Package Install
+      run: npm install
+    - name: TypeScript Compile
+      run: npm run lint:ts 
+    - name: Run eslint-and-prettier
+      run: npm run lint
