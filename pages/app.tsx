@@ -1,4 +1,4 @@
-import { VFC } from "react";
+import { VFC } from 'react';
 
 const App: VFC = () => {
   return (

@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "tsc": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "lint":"eslint ./ --ext ts,tsx && prettier --write './**/*.{ts,tsx}'" 
   },
   "dependencies": {
     "@types/styled-components": "^5.1.9",

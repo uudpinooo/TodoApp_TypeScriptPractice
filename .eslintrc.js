@@ -26,10 +26,12 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'no-console': 'error',
+    'quotes': ['error', 'single'] ,
+    'space-before-blocks': ['error', { 'functions': 'always' }] 
   },
   settings: {
     react: {
-        "version": "latest",
+        'version': 'latest',
     },
 },
 }
