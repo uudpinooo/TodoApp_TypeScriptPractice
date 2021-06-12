@@ -1,0 +1,8 @@
+name: Front-End CI Actions
+on: [push]
+jobs:
+  eslint-and-prettier:
+  runs-on: macos-latest
+steps:
+  - name: run eslint-and-prettier
+    run: npm run lint
