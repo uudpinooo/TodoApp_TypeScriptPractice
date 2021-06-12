@@ -7,7 +7,7 @@
     "start": "next start",
     "tsc": "tsc",
     "test": "jest",
-    "lint":"eslint --fix ./ --ext ts,tsx && prettier --write './**/*.{ts,tsx}'"
+    "lint": "eslint --fix ./ --ext ts,tsx && prettier --write './**/*.{ts,tsx}'"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.9",
