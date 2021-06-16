@@ -1,4 +1,4 @@
-import { useContext, VFC } from "react";
+import { useContext, VFC } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { Context, ContextType } from 'providers/Provider';
@@ -11,7 +11,7 @@ const DeleteTodos: VFC = () => {
     const target = [...deleteTodos];
     target.splice(index, 1);
     setDeleteTodos(target);
-  }
+  };
 
   return (
     <div>
@@ -20,17 +20,19 @@ const DeleteTodos: VFC = () => {
         {deleteTodos.map((todo, index) => {
           return (
             <StyledIncompleteTodo key={index}>
-                <li>{todo}</li>
-              <StyledButton onClick={() => onClickDelete(index)}>完全に削除</StyledButton>
+              <li>{todo}</li>
+              <StyledButton onClick={() => onClickDelete(index)}>
+                完全に削除
+              </StyledButton>
             </StyledIncompleteTodo>
-          )
+          );
         })}
       </ul>
 
       <Link href="/">もどる</Link>
     </div>
-  )
-}
+  );
+};
 
 const StyledP = styled.p`
   font-size: 1.1rem;
