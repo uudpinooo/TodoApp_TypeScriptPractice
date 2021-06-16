@@ -27,7 +27,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'no-console': 'error',
     'quotes': ['error', 'single'] ,
-    'space-before-blocks': ['error', { 'functions': 'always' }] 
+    'space-before-blocks': ['error', { 'functions': 'always' }],
+    "react/prop-types": "off"
   },
   settings: {
     react: {
