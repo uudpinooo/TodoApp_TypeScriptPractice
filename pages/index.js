@@ -1,5 +1,7 @@
+import { Provider } from 'providers/Provider';
 import styled from 'styled-components'
-import App from './app';
+import { App } from './app';
+import DeleteTodos from './delete';
 
 const Title = styled.h1`
   font-size: 50px;
@@ -8,9 +10,9 @@ const Title = styled.h1`
 
 export default function Home() {
   return (
-    <>
-    <App />
-    <Title>Next Todo</Title>
-    </>
-    )
+    <Provider>
+      <App />
+      <DeleteTodos />
+    </Provider>
+  )
 }
