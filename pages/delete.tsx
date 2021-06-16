@@ -20,7 +20,9 @@ const DeleteTodos: VFC = () => {
         {deleteTodos.map((todo, index) => {
           return (
             <StyledIncompleteTodo>
-              <li key={index}>{todo}</li>
+              <span key={index}>
+                <li>{todo}</li>
+              </span>
               <StyledButton onClick={() => onClickDelete(index)}>完全に削除</StyledButton>
             </StyledIncompleteTodo>
           )

@@ -69,7 +69,9 @@ export const App: VFC = () => {
         {incompleteTodos.map((todo, index) => {
           return (
             <StyledIncompleteTodo>
-              <li key={index}>{todo}</li>
+              <span key={index}>
+                <li>{todo}</li>
+              </span>
               <StyledButton onClick={() => onClickComplete(todo, index)}>完了</StyledButton>
               <StyledButton onClick={() => onClickDelete(index, "inComplete")}>削除</StyledButton>
             </StyledIncompleteTodo>
@@ -79,7 +81,9 @@ export const App: VFC = () => {
         {completeTodos.map((todo, index) => {
           return (
             <StyledIncompleteTodo>
-              <li key={index}>{todo}</li>
+              <span key={index}>
+                <li>{todo}</li>
+              </span>
               <StyledButton onClick={() => onClickBack(todo, index)}>戻す</StyledButton>
               <StyledButton onClick={() => onClickDelete(index, "complete")}>削除</StyledButton>
             </StyledIncompleteTodo>
