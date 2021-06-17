@@ -25,7 +25,6 @@ export const App: VFC = () => {
       setIncompleteTodos([...incompleteTodos, newTodo]);
       setNewTodo('');
     }
-    return;
   };
 
   const onClickComplete = (todo: string, index: number) => {
