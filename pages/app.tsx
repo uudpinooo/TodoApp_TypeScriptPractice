@@ -133,5 +133,3 @@ const StyledButton = styled.button`
     cursor: pointer;
   }
 `;
-
-// export default App;
