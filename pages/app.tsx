@@ -86,7 +86,9 @@ export const App: VFC = () => {
               <StyledButton onClick={() => onClickComplete(todo, index)}>
                 完了
               </StyledButton>
-              <StyledButton onClick={() => onClickDelete(index, todo, 'inComplete')}>
+              <StyledButton
+                onClick={() => onClickDelete(index, todo, 'inComplete')}
+              >
                 削除
               </StyledButton>
             </StyledIncompleteTodo>
@@ -100,7 +102,9 @@ export const App: VFC = () => {
               <StyledButton onClick={() => onClickBack(todo, index)}>
                 戻す
               </StyledButton>
-              <StyledButton onClick={() => onClickDelete(index, todo, 'complete')}>
+              <StyledButton
+                onClick={() => onClickDelete(index, todo, 'complete')}
+              >
                 削除
               </StyledButton>
             </StyledIncompleteTodo>
