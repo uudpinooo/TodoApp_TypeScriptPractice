@@ -1,4 +1,3 @@
-import { Provider } from 'providers/Provider';
 import styled from 'styled-components'
 import { App } from './app';
 import DeleteTodos from './delete';
@@ -10,9 +9,8 @@ const Title = styled.h1`
 
 export default function Home() {
   return (
-    <Provider>
+    <div>
       <App />
-      <DeleteTodos />
-    </Provider>
+    </div>
   )
 }

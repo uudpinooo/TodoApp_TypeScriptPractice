@@ -28,10 +28,7 @@ export const Provider: VFC<Props> = ({ children }) => {
   const [newTodo, setNewTodo] = useState<string>('');
   const [incompleteTodos, setIncompleteTodos] = useState<string[]>([]);
   const [completeTodos, setCompleteTodos] = useState<string[]>([]);
-  const [deleteTodos, setDeleteTodos] = useState<string[]>([
-    '未完了1',
-    '未完了2',
-  ]);
+  const [deleteTodos, setDeleteTodos] = useState<string[]>([]);
 
   return (
     <Context.Provider

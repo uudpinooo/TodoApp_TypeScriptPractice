@@ -11,6 +11,8 @@ export const App: VFC = () => {
     setIncompleteTodos,
     completeTodos,
     setCompleteTodos,
+    deleteTodos,
+    setDeleteTodos,
   } = useContext<ContextType>(Context);
 
   const onChangeInput = (e: ChangeEvent<HTMLInputElement>) =>
@@ -45,7 +47,7 @@ export const App: VFC = () => {
     setIncompleteTodos([...incompleteTodos, todo]);
   };
 
-  const onClickDelete = (index: number, status: string) => {
+  const onClickDelete = (index: number, todo: string, status: string) => {
     // 未完了Todoの削除の場合はinCompleteTodosから指定のTodoを削除
     if (status === 'inComplete') {
       const targetOfIncomplete = [...incompleteTodos];
@@ -59,6 +61,9 @@ export const App: VFC = () => {
       targetODCmplete.splice(index, 1);
       setCompleteTodos(targetODCmplete);
     }
+
+    // 共通処理としてdeletetodosに追加
+    setDeleteTodos([...deleteTodos, todo]);
   };
 
   return (
@@ -81,7 +86,7 @@ export const App: VFC = () => {
               <StyledButton onClick={() => onClickComplete(todo, index)}>
                 完了
               </StyledButton>
-              <StyledButton onClick={() => onClickDelete(index, 'inComplete')}>
+              <StyledButton onClick={() => onClickDelete(index, todo, 'inComplete')}>
                 削除
               </StyledButton>
             </StyledIncompleteTodo>
@@ -95,7 +100,7 @@ export const App: VFC = () => {
               <StyledButton onClick={() => onClickBack(todo, index)}>
                 戻す
               </StyledButton>
-              <StyledButton onClick={() => onClickDelete(index, 'complete')}>
+              <StyledButton onClick={() => onClickDelete(index, todo, 'complete')}>
                 削除
               </StyledButton>
             </StyledIncompleteTodo>
